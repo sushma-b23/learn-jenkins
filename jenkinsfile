@@ -1,16 +1,23 @@
 pipeline {
 
-      agent any
+     agent {
 
-      stages {
+        lable 'ansible'
 
-         stage('Hello') {
+     }
+     stages {
+
+          stage('Hello') {
 
             steps {
 
                echo 'Hello World'
 
             }
+
           }
-       }
+
+
+     }
+
     }
