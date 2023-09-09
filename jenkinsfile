@@ -1,22 +1,12 @@
 pipeline {
 
-     agent {
+     post {
 
-        lable 'ansible'
+        alwys {
 
-     }
-     stages {
+          echo "sending email"
 
-          stage('Hello') {
-
-            steps {
-
-               echo 'Hello World'
-
-            }
-
-          }
-
+        }
 
      }
 
