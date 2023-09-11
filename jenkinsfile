@@ -1,5 +1,6 @@
 pipeline {
-     agent {
+
+   agent {
          label 'ansible'
     }
      stages {
@@ -9,10 +10,25 @@ pipeline {
 
            }
         }
+
+        stage('Hello1') {
+                   steps {
+                     echo 'Hello World'
+
+                   }
+                }
+
+
+        stage('Hello2') {
+                   steps {
+                     echo 'Hello World'
+
+                   }
+                }
      }
 
    post {
-      alwys {
+      always {
          echo "sending email"
   }
 
