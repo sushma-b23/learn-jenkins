@@ -11,14 +11,10 @@ pipeline {
         }
      }
 
-     post {
+   post {
+      alwys {
+         echo "sending email"
+  }
 
-        alwys {
-
-          echo "sending email"
-
-        }
-
-     }
-
-    }
+ }
+}
