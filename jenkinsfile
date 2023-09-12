@@ -8,13 +8,16 @@ pipeline {
           echo 'Hello World'
         }
       }
-
-    }
-
- post {
-   always {
-      echo "sending email"
-   }
- }
+     stage('Hello1') {
+             steps {
+               echo 'Hello World'
+             }
+           }
+      stage('Hello2') {
+              steps {
+                echo 'Hello World'
+              }
+            }
+  }
 
 }
