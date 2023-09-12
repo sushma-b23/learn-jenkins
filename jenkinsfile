@@ -1,42 +1,12 @@
 pipeline {
-
-   agent {
-         label 'ansible'
-    }
-     stages {
-        stage('Hello') {
-           steps {
-             echo 'Hello World'
-
-           }
+    agent any
+    stages {
+      stage('Hello') {
+        steps {
+          echo 'Hello World'
         }
+      }
 
-        stage('Hello1') {
-                   steps {
-                     echo 'Hello World'
+    }
 
-                   }
-                }
-
-
-        stage('Hello2') {
-                   steps {
-                     echo 'Hello World'
-                     mail bcc: '', body: 'Helo this is a mail', cc: '', from: '', replyTo: '', subject: 'Test', to: 'susmaboothu5@gmail.com'
-                   }
-                }
-     }
-
-   post {
-      always {
-         echo "sending email"
-  }
-
- }
 }
-
-
-
-@Library('roboshop') _
-
-test()
